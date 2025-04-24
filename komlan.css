@@ -1,0 +1,210 @@
+/* Reset some basic elements */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 100%;
+}
+
+/* Header Styling */
+header {
+    background-color: #7fcdff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #333333;
+    font-size: 2em;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #333333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+main h2 {
+    color: #444444;
+    margin-bottom: 15px;
+}
+
+main p {
+    margin-bottom: 15px;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+
+/* Small Screens (Mobile) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.1em;
+    }
+
+    main {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+/* Medium Screens (Tablet) */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 1.1em;
+    }
+
+    main {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    footer {
+        font-size: 0.85em;
+    }
+}
+
+/* Large Screens (Desktop) */
+@media (min-width: 1024px) {
+    body {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
+
+    main {
+        max-width: 1000px;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+/* Background Images */
+.home {
+    background-image: url('outer_space3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.ocean {
+    background-image: url('ocean2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.outerspace {
+    background-image: url('outer_space2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.references-page {
+    background-image: url('references-bg.jpg');
+    background-position: center;
+}
+
+.quiz {
+    background-image: url('ocean3.jpg');
+    background-position: center;
+    background-size: auto;
+}
+
