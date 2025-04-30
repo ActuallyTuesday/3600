@@ -1,0 +1,84 @@
+<!-- topic2.html (Topic Page 2) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outer Space</title>
+    <link rel="stylesheet" href="komlan.css">
+</head>
+<body class="quiz">
+    <header>
+        <h1>Quiz</h1>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="komlan2.html">The Ocean</a></li>
+                <li><a href="komlan3.html">Outer Space</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="komlanquiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <h2>Here is a quiz to test what you know!</h2>
+            <div class="question">1. What is one reason why the ocean is considered scary?</div>
+            <div class="answers">
+                <label><input type="radio" name="q1"> a) It has no living creatures</label>
+                <label><input type="radio" name="q1"> b) It is small and easy to explore</label>
+                <label><input type="radio" name="q1"> c) It contains mysterious and terrifying secrets beneath its surface</label>
+                <label><input type="radio" name="q1"> d) It is always calm and predictable</label>
+            </div>
+
+            <div class="question">2. What happens if a human enters space without a protective suit?</div>
+            <div class="answers">
+                <label><input type="radio" name="q2"> a) They will be fine for a few hours</label>
+                <label><input type="radio" name="q2"> b) They will instantly freeze, suffocate, or be exposed to deadly cosmic rays</label>
+                <label><input type="radio" name="q2"> c) They will float peacefully without harm</label>
+                <label><input type="radio" name="q2"> d) They will gain superhuman abilities</label>
+            </div>
+
+            <div class="question">3. What cosmic phenomenon has an immense gravitational pull that can trap anything?</div>
+            <div class="answers">
+                <label><input type="radio" name="q3"> a) Supernova</label>
+                <label><input type="radio" name="q3"> b) Black hole</label>
+                <label><input type="radio" name="q3"> c) Comet</label>
+                <label><input type="radio" name="q3"> d) Nebula</label>
+            </div>
+
+            <div class="question">4. Fill in the blank: Over ____% of the ocean remains unexplored, leaving many mysteries undiscovered.</div>
+            <div class="answers">
+                <input type="text" name="q4" placeholder="Enter your answer here">
+            </div>
+
+            <div class="question">5. Which of the following contribute to the ocean’s mystery and fear factor? (Select all that apply)</div>
+            <div class="answers">
+                <label><input type="checkbox" name="q5"> a) Shipwrecks and ghost ships</label>
+                <label><input type="checkbox" name="q5"> b) Predictable weather conditions</label>
+                <label><input type="checkbox" name="q5"> c) Deep-sea creatures like the giant squid</label>
+                <label><input type="checkbox" name="q5"> d) Calm and shallow waters</label>
+            </div>
+            <div class="restart">
+                <button onclick="restartQuiz()">Restart Quiz</button>
+                <button onclick="evaluateQuiz()">Submit Quiz</button>
+
+            </div>
+
+            <script>
+                function restartQuiz() {
+                    const inputs = document.querySelectorAll('input');
+                    inputs.forEach(input => {
+                        if (input.type === 'radio' || input.type === 'checkbox') {
+                            input.checked = false;
+                        } else if (input.type === 'text') {
+                            input.value = '';
+                        }
+                    });
+                }
+            </script>
+        </main>
+    </div>
+<script src="komlan.js"></script>
+</body>
+</html>
