@@ -1,0 +1,100 @@
+<!-- komlanquiz.html (Quiz Page) -->
+<!DOCTYPE html>
+<!-- Declares this document as HTML5 -->
+<html lang="en">
+<head>
+    <!-- Sets character encoding and responsive layout -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title shown in the browser tab -->
+    <title>Computer Science Quiz</title>
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="komlan.css">
+    <!-- Link to external JavaScript file with defer so it loads after HTML -->
+    <script src="komlan.js" defer></script>
+</head>
+<!-- Applies specific styling for quiz page -->
+<body class="quiz">
+    <!-- Main header -->
+    <header>
+        <h1>Quiz</h1>
+    </header>
+    <!-- Container that wraps the sidebar and quiz content -->
+    <div class="container">
+        <!-- Sidebar navigation menu -->
+        <nav class="sidebar">
+            <!-- This part is to contain my navigation bar -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="komlan2.html">John Von Neumann</a></li>
+                <li><a href="komlan3.html">Alan Turing</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="komlanquiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+        <!-- Main content area for the quiz -->
+        <main class="content">
+            <!-- Section introduction -->
+            <h2 style="background-color: #93e6d3;">Here is a quiz to test what you know!</h2>
+            <!-- Multiple choice question 1 -->
+            <div class="question">1. What theoretical device did Alan Turing develop in the 1930s?</div>
+            <div class="answers">
+                <label><input type="radio" name="q1"> a) The ENIAC</label>
+                <label><input type="radio" name="q1"> b) The Bombe</label>
+                <label><input type="radio" name="q1"> c) The Turing machine</label>
+                <label><input type="radio" name="q1"> d) The von Neumann architecture</label>
+            </div>
+            <!-- Multiple choice question 2 -->
+            <div class="question">2. Which code did Turing help break during World War II?</div>
+            <div class="answers">
+                <label><input type="radio" name="q2"> a) Caesar Cipher</label>
+                <label><input type="radio" name="q2"> b) Morse Code</label>
+                <label><input type="radio" name="q2"> c) Binary Code</label>
+                <label><input type="radio" name="q2"> d) Enigma Code</label>
+            </div>
+            <!-- Multiple choice question 3 -->
+            <div class="question">3. Von Neumann's architecture allows a computer’s memory to store:</div>
+            <div class="answers">
+                <label><input type="radio" name="q3"> a) Only data</label>
+                <label><input type="radio" name="q3"> b) Only instructions</label>
+                <label><input type="radio" name="q3"> c) Programs and results only</label>
+                <label><input type="radio" name="q3"> d) Both instructions and data</label>
+            </div>
+            <!-- Short answer question 4 -->
+            <div class="question">4. Fill in the blank: John von Neumann was a brilliant ________-American mathematician, physicist, and engineer.</div>
+            <div class="answers">
+                <input type="text" name="q4" placeholder="Enter your answer here">
+            </div>
+            <!-- Checkbox question 5 -->
+            <div class="question">5. Which fields, besides computing, did John von Neumann contribute to? (Select all that apply)</div>
+            <div class="answers">
+                <label><input type="checkbox" name="q5"> a) Game theory</label>
+                <label><input type="checkbox" name="q5"> b) Astrophysics</label>
+                <label><input type="checkbox" name="q5"> c) Quantum mechanics</label>
+                <label><input type="checkbox" name="q5"> d) Nuclear weapons development</label>
+            </div>
+            <!-- Buttons for submitting and restarting quiz -->
+            <div class="controls">
+                <button onclick="evaluateQuiz()">Submit Quiz</button>
+                <button onclick="restartQuiz()">Restart Quiz</button>
+            </div>
+            <!-- Inline JavaScript to clear quiz answers -->
+            <script>
+                function restartQuiz() {
+                    const inputs = document.querySelectorAll('input');
+                    inputs.forEach(input => {
+                        if (input.type === 'radio' || input.type === 'checkbox') {
+                            input.checked = false;
+                        } else if (input.type === 'text') {
+                            input.value = '';
+                        }
+                    });
+                    // Remove previous results if they exist
+                    const existingResults = document.querySelector(".results");
+                    if (existingResults) existingResults.remove();
+                }
+            </script>
+        </main>
+    </div>
+</body>
+</html>
